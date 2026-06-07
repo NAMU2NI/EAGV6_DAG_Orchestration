@@ -1,0 +1,41 @@
+# Secrets — NEVER commit
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+*.egg-info/
+dist/
+build/
+
+# uv
+uv.lock
+
+# Runtime state (session data, sandbox temp files)
+S8SharedCode/code/state/sessions/*/
+!S8SharedCode/code/state/sessions/.gitkeep
+S8SharedCode/code/sandbox/*.txt
+!S8SharedCode/code/sandbox/.gitkeep
+
+# Gateway databases
+S8SharedCode/gateway/*.db
+llm_gatewayV8/*.db
+
+# Test/lint cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
